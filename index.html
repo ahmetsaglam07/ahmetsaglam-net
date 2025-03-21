@@ -13,7 +13,7 @@
       height: 100%;
       font-family: 'Inter', sans-serif;
       color: #fff;
-      background-image: url('https://raw.githubusercontent.com/ahmetsaglam07/ahmetsaglam-net/main/black-grid-2500w.avif');
+      background-image: url('https://raw.githubusercontent.com/ahmetsaglam07/saglam.github.io/main/black-grid-2500w.avif');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -22,6 +22,26 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .menu {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .menu a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      font-size: 18px;
     }
 
     main {
@@ -74,17 +94,38 @@
   </style>
 </head>
 <body>
+  <nav>
+    <div class="menu">
+      <a href="#" onclick="setLanguage('tr')">TR</a>
+      <a href="#" onclick="setLanguage('en')">EN</a>
+    </div>
+  </nav>
+
   <main>
-    <h1>Ahmet SAĞLAM</h1>
-    <p>Elektrikli Araç Teknolojileri</p>
+    <h1 id="title">Ahmet SAĞLAM</h1>
+    <p id="description">Elektrikli Araç Teknolojileri</p>
 
     <div class="links">
-      <a href="https://www.imecar.com" target="_blank">İMECAR</a>
+      <a id="imecar-link" href="https://www.imecar.com" target="_blank">İMECAR</a>
       <a href="mailto:ahmet@ahmetsaglam.net">E-posta</a>
       <a href="https://www.linkedin.com/in/ahmet-sa%C4%9Flam-49b579b1/" target="_blank">LinkedIn</a>
     </div>
   </main>
 
   <div class="footer">© 2025 Ahmet Sağlam</div>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'tr') {
+        document.getElementById('title').innerText = 'Ahmet SAĞLAM';
+        document.getElementById('description').innerText = 'Elektrikli Araç Teknolojileri';
+        document.getElementById('imecar-link').innerText = 'İMECAR';
+      } else {
+        document.getElementById('title').innerText = 'Ahmet SAĞLAM';
+        document.getElementById('description').innerText = 'Electric Vehicle Technologies';
+        document.getElementById('imecar-link').innerText = 'Imecar';
+      }
+    }
+  </script>
 </body>
 </html>
