@@ -13,7 +13,6 @@
       height: 100%;
       font-family: 'Inter', sans-serif;
       color: #fff;
-      overflow: hidden;
       background-image: url('https://raw.githubusercontent.com/ahmetsaglam07/ahmetsaglam-net/main/black-grid-2500w.avif');
       background-repeat: no-repeat;
       background-position: center center;
@@ -22,28 +21,34 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 6vw;
       margin: 0 0 10px;
       text-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
     }
 
     p {
-      font-size: 20px;
+      font-size: 4vw;
       margin-bottom: 30px;
       color: #aaa;
     }
 
     .links a {
       display: inline-block;
-      margin: 0 10px;
+      margin: 10px;
       color: #0ff;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s ease;
       text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.6);
+      font-size: 4vw;
     }
 
     .links a:hover {
@@ -53,9 +58,18 @@
 
     .footer {
       position: absolute;
-      bottom: 20px;
-      font-size: 14px;
-      color: #555;
+      bottom: 10px;
+      font-size: 3vw;
+      color: #ccc;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 48px; }
+      p { font-size: 20px; }
+      .links a { font-size: 18px; }
+      .footer { font-size: 14px; }
     }
   </style>
 </head>
